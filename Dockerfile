@@ -1,9 +1,11 @@
-FROM blang/latex
-
+FROM ubuntu:xenial
 MAINTAINER Douglas De Rizzo Meneghetti <douglasrizzom@gmail.com>
+ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get -y update && \
-    apt-get -yq install biber texlive-publishers texlive-lang-portuguese texlive-latex-extra texlive-fonts-recommended
+RUN apt-get update -q && apt-get install -qy \
+    make git \
+    texlive-full biber texlive-publishers texlive-lang-portuguese texlive-latex-extra texlive-fonts-recommended \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get autoclean
 RUN apt-get clean
