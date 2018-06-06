@@ -7,28 +7,14 @@
 a docker image based on **ubuntu 14.04** containing:
 
 * `texlive-full`
-* `python-pygments`
-* `gnuplot`
 * `biber`
-* `pandoc`
-* `pandoc-citeproc`
-
-... and extra tools:
-
-* `wget`
-* `wput`
-* `curl`
-* `zip`
-* `tar`
-* `rsync`
-* `make`
 
 Inherited from [blang/latex](https://hub.docker.com/r/blang/latex/).
 
 ## Install
 
-[Docker Hub](https://hub.docker.com/r/janstuemmel/latex/)
+[Docker Hub](https://hub.docker.com/r/tetamusha/latex/)
 
 ```sh
-docker pull janstuemmel/latex
+docker pull tetamusha/latex
 ```
